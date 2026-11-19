@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hallu-traj"
+version = "0.1.0"
+description = "Обнаружение галлюцинаций LLM по траекториям скрытых состояний"
+requires-python = ">=3.10"
+dependencies = ["numpy", "scipy", "scikit-learn", "joblib"]
+
+[project.optional-dependencies]
+llm = ["torch", "transformers>=4.40", "accelerate"]
+ui = ["gradio>=4.0", "pandas"]
+eval = ["datasets"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["hallu_traj*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

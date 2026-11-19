@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Виртуальные окружения
+.venv/
+venv/
+env/
+
+# Служебные файлы Gradio
+.gradio/
+
+# Результаты запусков
+runs/*
+!runs/exp1/
+runs/exp1/*
+!runs/exp1/detector.joblib
+*.pkl
+
+# Кэш моделей и данных Hugging Face
+.cache/
+huggingface/
+
+# Редакторы и система
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Секреты
+.env
+*.token
